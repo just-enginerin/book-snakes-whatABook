@@ -10,33 +10,10 @@
  * password: s3cret
 */
 
-// Delete any preexisting customers and books collections.
-//db.customers.drop()
+// Delete any books collections.
 db.books.drop()
 
-// Create the customers and books collections using Document Validation.
-/*
-db.createCollection("customers", {
-	validator: { $jsonSchema: {
-		bsonType: "object",
-		properties: {
-			customerId: {
-				bsonType: "string"
-			},
-			firstName: {
-				bsonType: "string"
-			},
-			lastName: {
-				bsonType: "string"
-			},
-			wishlistItems: {
-				bsonType: "array"
-			}
-		}
-	}}
-})
-*/
-
+// Create the books collection using Document Validation.
 db.createCollection("books", {
 	validator: { $jsonSchema: {
 		bsonType: "object",
@@ -56,34 +33,6 @@ db.createCollection("books", {
 		}
 	}}
 })
-
-/*
-// Customers
-let customers = [
-	{
-		"customerId": 1,
-		"firstName": "",
-		"lastName": "",
-		wishlistItems: []
-	},
-	{
-		"customerId": 1,
-		"firstName": "",
-		"lastName": "",
-		wishlistItems: []
-	},
-	{
-		"customerId": 1,
-		"firstName": "",
-		"lastName": "",
-		wishlistItems: []
-	}
-]
-
-// Insert the Customer documents.
-db.customers.insertMany(customers)
-*/
-
 
 // Insert the Book documents.
 db.books.insertMany([
