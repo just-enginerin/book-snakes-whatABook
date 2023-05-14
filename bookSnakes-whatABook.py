@@ -60,7 +60,7 @@ def addBookToCustomerWishlist(customerId, bookId):
 # Query to remove a book from a customer's wishlist.
 def removeBookFromCustomerWishlist(customerId, bookId):
     specified_customer = db.customers.find_one({'_id': bson.ObjectId(customerId)})
-    
+
     # Find the specified book by ID.
     specified_book = db.books.find_one({'bookId': bookId})
 
@@ -95,11 +95,11 @@ specified_book_id = '978-1408855652'
 
 print('Display a wishlist by customer ID:')
 displayCustomerWishlist(specified_customer_id)
-print('\n')
+print()
 
 print('Add a book to a customer’s wishlist:')
 addBookToCustomerWishlist(specified_customer_id, specified_book_id)
-print('\n')
+print()
 
 print('Remove a book from a customer’s wishlist:')
 removeBookFromCustomerWishlist(specified_customer_id, specified_book_id)

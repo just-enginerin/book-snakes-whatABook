@@ -105,7 +105,7 @@ db.books.insertMany([
 ])
 
 // Display a list of books.
-db.books.find()
+db.books.find().toArray()
 
 // Display a list of books by genre.
 db.books.find({genre: "Autobiography"}).toArray()
