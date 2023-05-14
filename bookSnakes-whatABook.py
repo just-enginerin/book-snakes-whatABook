@@ -99,4 +99,3 @@ print('\n')
 
 print('Remove a book from a customer’s wishlist:')
 removeBookFromCustomerWishlist(specified_customer_id, specified_book_id)
-print('\n')
